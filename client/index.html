@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Halo semua</h1>
+    <p id="output"></p>
+    <video id="video"></video>
+    <script type="module">
+        import QrScanner from '/node_modules/qr-scanner/qr-scanner.min.js';
+
+        const video = document.getElementById("video");
+
+        const qrScanner = new QrScanner(
+            video,
+            result => {
+                alert(result);
+                qrScanner.stop();
+                video.remove();
+            },
+            {highlightScanRegion: true}
+        );
+        qrScanner.start();
+    </script>
+</body>
+</html>

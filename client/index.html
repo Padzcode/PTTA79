@@ -9,21 +9,8 @@
     <h1>Halo semua</h1>
     <p id="output"></p>
     <video id="video"></video>
-    <script type="module">
-        import QrScanner from '/node_modules/qr-scanner/qr-scanner.min.js';
-
-        const video = document.getElementById("video");
-
-        const qrScanner = new QrScanner(
-            video,
-            result => {
-                alert(result);
-                qrScanner.stop();
-                video.remove();
-            },
-            {highlightScanRegion: true}
-        );
-        qrScanner.start();
-    </script>
+    <div style="gap: 10px; display: flex" id="qrcode"></div>
 </body>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<script type="module" src="skrip.js"></script>
 </html>

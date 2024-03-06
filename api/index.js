@@ -3,6 +3,9 @@ const app = express();
 const path = require("path");
 const utils = require("./utils");
 
+
+// Api udh oindah repo
+
 app.use(express.static(path.resolve(__dirname, "..", "client")));
 // app.use(express.static(path.resolve(__dirname, "..", "client")));
 
